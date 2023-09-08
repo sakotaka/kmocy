@@ -15,9 +15,9 @@ $(document).ready(function(){
     });
 });
 window.addEventListener("scroll", function () {
-  const elm = document.querySelector("#header");
+  const elm = document.querySelector("header");
   const scroll = window.pageYOffset;
-  if (scroll > 200 || scroll == 0) {
+  if (scroll > 1) {
     elm.style.opacity = "1";
     // console.log(scroll);
   } else {
@@ -25,14 +25,14 @@ window.addEventListener("scroll", function () {
     // console.log(scroll);
   }
 });
-window.addEventListener("scroll", function () {
-  const elm = document.querySelector("#LINE");
-  const scroll = window.pageYOffset;
-  if (scroll > 700) {
-    elm.style.opacity = "1";
-    // console.log(scroll);
-  } else {
-    elm.style.opacity = "0";
-    // console.log(scroll);
-  }
+document.addEventListener("DOMContentLoaded", function() {
+    window.addEventListener("scroll", function () {
+        const elm = document.querySelector("#LINE");
+        const scroll = window.scrollY;
+        if (scroll > 700) {
+            elm.style.opacity = "1";
+        } else {
+            elm.style.opacity = "0";
+        }
+    });
 });
